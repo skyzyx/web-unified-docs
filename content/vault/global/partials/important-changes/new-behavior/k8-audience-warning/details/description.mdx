@@ -1,0 +1,17 @@
+Vault logs a warning when you create or update a Kubernetes auth role without an
+audience.
+
+#### Recommendation
+
+We recommend updating your policies before Vault makes the audience value
+required for all Kubernetes authentication roles so Vault can explicitly
+validate that the audience claim in JWT tokens (`aud`) is intended for Vault and
+not another service. For example:
+
+```shell-session
+$ vault write auth/kubernetes/role/demo      \
+    bound_service_account_names=myapp        \
+    bound_service_account_namespaces=default \
+    policies=default                         \
+    ttl=1h
+```
