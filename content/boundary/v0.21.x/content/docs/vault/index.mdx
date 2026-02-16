@@ -3,6 +3,10 @@ layout: docs
 page_title: Vault integration
 description: >-
   Understand the security benefits of integrating Boundary and Vault to manage secrets and broker or inject credentials. Set up Vault as an OIDC bridge provider.
+# START AUTO GENERATED METADATA, DO NOT EDIT
+created_at: 2025-11-18T17:04:41-05:00
+last_modified: 2026-01-26T14:35:46-05:00
+# END AUTO GENERATED METADATA
 ---
 
 # Vault integration
@@ -52,7 +56,7 @@ When you connect to the database using Boundary, Boundary displays the brokered 
 
 ### Injected credentials
 
-<EnterpriseAlert product="boundary">This feature requires <a href="https://www.hashicorp.com/products/boundary">HCP Boundary or Boundary Enterprise</a></EnterpriseAlert>
+@include 'alerts/hcp-and-ent.mdx'
 
 You can inject credentials directly into sessions using HCP Boundary or Boundary Enterprise. Injecting credentials removes the need for end users to manually use a brokered credential to access the target after Boundary has established a session. It also prevents users from ever accessing the credential. Injected credentials are never passed back to the end user.
 
