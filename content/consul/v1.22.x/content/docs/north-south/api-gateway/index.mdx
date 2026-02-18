@@ -39,7 +39,7 @@ The following steps describe the general workflow for deploying a Consul API gat
    - For Kubernetes-orchestrated services on OpenShift, you must also enable the `openShift.enabled` parameter.
 1. Define and deploy the API gateway configurations to create the API gateway artifacts.
    - VM users need to create configuration entries for the gateway service, listeners configurations, and references to TLS certificates.
-   - For Kubernetes-orchestrated environments, configurations include also `GatewayClassConfig` and `parametersRef` parameters.
+   - For Kubernetes-orchestrated environments, configurations also include `GatewayClassConfig` and `parametersRef` parameters.
 1. Define and deploy routes between the gateway listeners and services in the mesh.
 
 Gateway configurations are modular, so you can define and attach routes and inline certificates to multiple gateways.
